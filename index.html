@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Echapresto Brief</title>
+  <meta name="description" content="Daily top 5 global stories on executive compensation, CEO pay, reward policy and pay legislation.">
+  <meta name="theme-color" content="#0f1b2d">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f1b2d'/><text x='32' y='43' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23e8b65a' text-anchor='middle'>JE</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="brand" href="./" aria-label="The Echapresto Brief, today">
+        <span class="brand__mark" aria-hidden="true">JE</span>
+        <span class="brand__text">
+          <span class="brand__name"><span class="brand__the">The </span>Echa<em>presto</em><span class="brand__brief"> Brief</span></span>
+          <span class="brand__tag">Five reward stories every morning. Presto.</span>
+        </span>
+      </a>
+
+      <nav class="datenav" aria-label="Choose a day">
+        <button class="datenav__btn" id="prevDay" type="button" aria-label="Previous day">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <label class="datenav__select">
+          <span class="visually-hidden">Edition date</span>
+          <select id="dateSelect"></select>
+        </label>
+        <button class="datenav__btn" id="nextDay" type="button" aria-label="Next day">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="edition-head">
+      <p class="edition-head__greeting" id="greeting">Good morning, Jorge ☕</p>
+      <p class="edition-head__kicker" id="editionKicker">Today's edition</p>
+      <h1 class="edition-head__title" id="editionTitle">The 5 stories that matter in Reward</h1>
+      <div class="filters" id="filters" role="toolbar" aria-label="Filter by topic"></div>
+    </section>
+
+    <div class="layout">
+      <section class="stories" id="stories" aria-live="polite">
+        <!-- skeleton -->
+        <article class="card card--lead skeleton" aria-hidden="true"><div></div><div></div><div></div></article>
+        <article class="card skeleton" aria-hidden="true"><div></div><div></div><div></div></article>
+        <article class="card skeleton" aria-hidden="true"><div></div><div></div><div></div></article>
+      </section>
+
+      <aside class="sidebar" aria-label="Archive">
+        <div class="panel">
+          <h2 class="panel__title">Archive</h2>
+          <ol class="archive" id="archive"></ol>
+        </div>
+        <div class="panel panel--muted">
+          <h2 class="panel__title">About</h2>
+          <p>Hand-picked every morning for Jorge Echapresto: CEO pay, executive compensation, new reward practices and the legislation that moves them. Summaries come in the language of the original article; tap <em>Read full article</em> to go to the source.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>The Echapresto Brief · served fresh, <em>presto</em>, every morning · summaries are original, articles belong to their publishers.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
